@@ -3,6 +3,8 @@ package politic_model;
 import java.util.ArrayList;
 import java.util.Random;
 
+import static politic_model.Field.Random;
+
 public class Application {
     public static void main (String[] args) {
         final Random random = new Random();
@@ -50,7 +52,7 @@ public class Application {
                             }
                         }
                     }
-                    if (gameField[i][j].field == Field.Random) {
+                    if (gameField[i][j].field == Random) {
                         neighbourOpinions.add(gameField[random.nextInt(rang)][random.nextInt(rang)].opinion);
                     }
                     // –Ч–∞–њ–Њ–ї–љ–µ–љ–Є–µ —Б–њ–Є—Б–Ї–∞ —А–∞–љ—Л–Љ–Є –Љ–Њ–і–µ–ї—П–Љ–Є.

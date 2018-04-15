@@ -17,7 +17,7 @@ public class PersonWithNeighbours extends Person{
         conformist = random.nextBoolean();
     }
 
-    public PersonWithNeighbours(PersonWithNeighbours source, Field field, boolean conformist){
+    public PersonWithNeighbours(PersonWithNeighbours source){
         this.zealot = source.zealot;
         this.opinion = source.opinion;
         this.field = field;
