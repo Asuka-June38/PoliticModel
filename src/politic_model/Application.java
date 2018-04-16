@@ -2,7 +2,6 @@ package politic_model;
 
 import java.util.ArrayList;
 import java.util.Random;
-
 import static politic_model.Field.Random;
 
 public class Application {
@@ -11,6 +10,7 @@ public class Application {
             final Random random = new Random();
             int rang = 5; // Rang of matrix.
             politic_model.PersonWithNeighbours[][] gameField = new politic_model.PersonWithNeighbours[rang][rang];
+            // Creating first matrix
             for (int i = 0; i < rang; i++) {
                 for (int j = 0; j < rang; j++) {
                     gameField[i][j] = new politic_model.PersonWithNeighbours();
@@ -33,7 +33,7 @@ public class Application {
 
                         // Getting list of opinions from Cross field.
                         if (gameField[i][j].field == Field.Cross) {
-                            int c = 0;
+                            int c = 0; // This variable shows which cell from field should be in list of opinions.
                             for (int a = i < 1 ? 0 : i - 1; a < tempIJ + 1; a++) {
                                 for (int b = j < 1 ? 0 : j - 1; b < tempIJ + 1; b++) {
                                     c++;
@@ -69,7 +69,6 @@ public class Application {
             // Printing matrix after iteration string by string.
             for (int i = 0; i < rang; i++) {
                 for (int j = 0; j < rang; j++) {
-                    gameField[i][j] = new politic_model.PersonWithNeighbours();
                     System.out.print(tempGameField[i][j].opinion.toString() + ' ');
                 }
                 System.out.println();
